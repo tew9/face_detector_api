@@ -34,6 +34,6 @@ app.get('/profile/:id', (req, res) => {Profile.profileHandler(req, res, database
 //Updating the rank for the user, PUT
 app.put('/rank', (req, res) => {Rank.rankHandler(req, res, database)})
 app.post('/imageurl', (req, res) => {Rank.handleApiCall(req, res)})
-app.listen(30001, ()=>{
-    console.log('Listening 30001!!')
+app.listen(process.env.PORT || 30001, ()=>{
+    console.log(`Listening ${process.env.PORT}...`)
 })
