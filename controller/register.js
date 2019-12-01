@@ -27,7 +27,7 @@ const RegisterHandler = ((req, res, database, bcrypt) =>{
                 .catch(err =>{
                     res.status(404).json("Registration Failed");
                 });
-        })
+        }).catch(err => res.status(400).json("Unable to Register"))
         .then(trx.commit)
         .catch(trx.rollback)
      });

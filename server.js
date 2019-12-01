@@ -22,8 +22,8 @@ app.use(express.json())
 app.use(cors())
 
 //setting up the end points
-app.get('/', (req, res) =>{res.send("It's now working well")});//for demo
-//app.get('/', (req, res) =>{res.send(database.users)});
+
+app.get('/', (req, res) =>{res.send(database.users)});
 //Login Route
 app.post('/login', (req, res) => {Signin.SigninHandler(req, res, database, bcrypt)});
 //POST registering new users.
