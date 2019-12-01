@@ -15,8 +15,6 @@ const database = knex({
             }
         });
 
-database.connect();
-
 const app = express()
 
 app.use(express.urlencoded({extended: false}))
