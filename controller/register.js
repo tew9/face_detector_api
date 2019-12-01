@@ -1,6 +1,6 @@
 const RegisterHandler = ((req, res, database, bcrypt) =>{
     const {email, password, name} = req.body;
-    if(!email || !name || !pass){
+    if(!email || !name || !password){
        return res.status(400).json("Incorrect form submitted");
     }
 
