@@ -30,7 +30,7 @@ const RegisterHandler = ((req, res, database, bcrypt) =>{
         })
         .then(trx.commit)
         .catch(trx.rollback)
-     }).catch(err => res.status(400).json("Unable to Register"));
+     })
 })
 
 module.exports = {
