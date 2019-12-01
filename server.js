@@ -24,7 +24,7 @@ app.use(cors())
 
 //setting up the end points
 
-app.get('/', (req, res) =>{res.send(db.users)});
+app.get('/', (req, res) =>{res.send(database.users)});
 //Login Route
 app.post('/login', (req, res) => {Signin.SigninHandler(req, res, database, bcrypt)});
 //POST registering new users.
